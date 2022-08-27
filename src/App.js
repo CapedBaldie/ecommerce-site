@@ -2,6 +2,7 @@ import React from 'react';
 import {
   ChakraProvider,
   Box,
+  Divider,
   Text,
   Link,
   VStack,
@@ -12,29 +13,17 @@ import {
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 import { Logo } from './Logo';
 import Footer from './Components/Footer';
+import Navbar from './Components/Navbar';
+import Map from './Components/Map';
 
 function App() {
   return (
     <ChakraProvider theme={theme}>
-      <Box textAlign="center" fontSize="xl">
-        <Grid minH="100vh" p={3}>
-          <ColorModeSwitcher justifySelf="flex-end" />
-          <VStack spacing={8}>
-            <Logo h="40vmin" pointerEvents="none" />
-            <Text>
-              Edit <Code fontSize="xl">src/App.js</Code> and save to reload.
-            </Text>
-            <Link
-              color="teal.500"
-              href="https://chakra-ui.com"
-              fontSize="2xl"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn Chakras
-            </Link>
-          </VStack>
-        </Grid>
+      <Box textAlign="center" fontSize="xl" bg='blackAlpha.900' height='100vh' /*pt='5px'*/>
+        <Box h='10px' w='100%' bg='black'></Box>
+        <Navbar />
+        <Box h='5px' w='100%' bg='white'></Box>
+        <Map />
         <Footer />
       </Box>
     </ChakraProvider>
