@@ -40,7 +40,7 @@ export default function Navbar() {
 
     return(
         <Box bg='black'>
-        <Box align='center'>
+        <Box align='center' pr='15px'>
         <Image  objectFit='cover' minW='0' src={logo} alt='ENIGMA.shop' />
         </Box>
         <HStack>
@@ -57,7 +57,7 @@ export default function Navbar() {
                     _placeholder={{ opacity: 1, color: 'white.600' }}
                     isInvalid
                     errorBorderColor='#FDC20A'/*'#09EBEE'*/
-                    focusBorderColor='#FDC20A'
+                    focusBorderColor='white'
                     onChange={handleChange} />                  
                 <InputRightElement>
                     <IconButton
@@ -72,37 +72,46 @@ export default function Navbar() {
                 </FormControl>
             </form>
         </InputGroup>
-     
+
+        <Link  color='#FDC20A' _hover={{color: 'white'/*#fff200*/ }}>
         <Button 
-            leftIcon={<MdLocationOn />}
-            color='#FDC20A'
-            variant='ghost'
+            leftIcon={<MdLocationOn/>}
+            bg='black'
+            _hover={{bg: 'black' }}
             size='lg'>
             Location
         </Button> 
-       
+        </Link>
+
+        <Link  color='#FDC20A' _hover={{color: 'white' }}>
         <Button 
             leftIcon={<BiLogIn />}
             color='#FDC20A'
-            variant='ghost'
+            bg='black'
+            _hover={{color: 'white' }}
             size='lg'>
             Sign In
         </Button>
+        </Link>
 
+        <Link  color='#FDC20A' _hover={{color: 'white' }}>
         <Button 
             leftIcon={<MdShoppingCart />}
             color='#FDC20A'
-            variant='ghost'
+            bg='black'
+            _hover={{color: 'white' }}
             size='lg'>
             Cart
         </Button>  
+        </Link>
+
         </HStack>
-        <Box  p='5px' w='100%'>
+        <Box  p='5px' w='100%' fontSize='16px'>
             <HStack spacing='50px' justifyContent='center'>
-                <Button color='#09EBEE' variant='link' size='sm'>Electronics</Button>
-                <Button color='#09EBEE' variant='link' size='sm'>Jewelery</Button>
-                <Button color='#09EBEE' variant='link' size='sm'>Mens's Clothing</Button>
-                <Button color='#09EBEE' variant='link' size='sm'>Women's Clothing</Button>
+                <Link color='#09EBEE' bg='black' _hover={{color: '#9CFF00' }} size='sm'>Electronics</Link>
+                <Link color='#09EBEE' bg='black' _hover={{color: '#9CFF00' }} size='sm'>Jewelery</Link>
+                <Link color='#09EBEE' bg='black' _hover={{color: '#9CFF00' }} size='sm'>Mens's Clothing</Link>
+                <Link color='#09EBEE' bg='black' _hover={{color: '#9CFF00' }} size='sm'>Women's Clothing</Link>
             </HStack>
         </Box>
         </Box>

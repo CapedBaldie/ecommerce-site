@@ -19,7 +19,7 @@ import Map from './Components/Map';
 function App() {
   return (
     <ChakraProvider theme={theme}>
-      <Box textAlign="center" fontSize="xl" bg='blackAlpha.900' height='100vh' /*pt='5px'*/>
+      <Box textAlign="center" fontSize="xl" bg='white' height='100vh' /*pt='5px'*/>
         <Box h='10px' w='100%' bg='black'></Box>
         <Navbar />
         <Box h='5px' w='100%' bg='white'></Box>
