@@ -11,12 +11,13 @@ import{
 } from '@chakra-ui/react';
 import { FaTwitter, FaFacebookF, FaYoutube, FaInstagram } from "react-icons/fa";
 import { LinkIcon } from '@chakra-ui/icons';
+import { ColorModeSwitcher } from '../ColorModeSwitcher';
 
 
 const Footer = () => {
     return (      
         <footer>
-        <Box bg='black' color='whiteAlpha.700' pr='40px' pl='40px' pt='20px'>
+        <Box bg='black' color='whiteAlpha.700' pr='40px' pl='40px' pt='20px' align='center'>
         <Flex justifyContent='space-between'>
         <Box  pb='80px' fontSize='15px'>
             <HStack align='top' /*justifyContent='space-evenly'*/ spacing='80px'>
@@ -77,6 +78,7 @@ const Footer = () => {
         </Box>
         </Flex>
         Made with ❤️ by <Link href='https://github.com/CapedBaldie'>CapedBaldie</Link>
+        <ColorModeSwitcher />
         </Box>
         </footer>
     );
